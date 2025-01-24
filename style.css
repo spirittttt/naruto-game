@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
+::selection {
+    background-color: transparent;
+}
+#frontpage {
+    width: 100%;
+    height: 30%;
+    padding: 0 5vw;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items : center;
+    justify-content : space-between;
+}
+#frontpage h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    position: absolute;
+    top: 10vw;
+    left: 34%;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    transition: all ease 0.3s;
+    opacity: 0;
+}
+#main {
+    background-color: black;
+}
+#container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#blackdiv {
+    position: absolute;
+    background-color: #1D1D1D;
+    width: 100%;
+    height: 5vw;
+    bottom: 0;
+}
+#grass {
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    background-color: transparent;
+    position: absolute;
+    bottom: 5%;
+}
+#grass img {
+    width: 20vw;
+}
+#naruto {
+    width: 15vw;
+    position: absolute;
+    bottom: 10%;
+    left: 10vw;
+    cursor: pointer;
+    transition: all ease 0.1s linear;
+}
+#naruto img{
+    width: 100%;
+}
+#sasuke {
+    width: 15vw;
+    position: absolute;
+    bottom: 10%;
+    left: 75vw;
+    transform: scaleX(-1);
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.animatesasuke {
+    animation: sasukemove 3s linear infinite;
+}
+#sasuke img{
+    width: 100%;
+}
+.animatenaruto {
+    animation: narutojump 0.8s linear;
+}
+#chidori {
+    position: absolute;
+    opacity: 0;
+    right: -4vw;
+    bottom: 3vw;
+    transition: all ease 0.5s;
+}
+.animatechidori {
+    opacity: 1;
+    animation: chidori 3s linear;
+}#rasengan {
+    position: absolute;
+    opacity: 0;
+    left: 8vw;
+    transition: all ease 0.5s;
+}
+.animaterasengan {
+    opacity: 1;
+    animation: rasengan 3s linear;
+}
+@keyframes narutojump {
+    0% {
+        bottom: 10%;
+    }
+    50% {
+        bottom: 60%;
+    }
+    100% {
+        bottom: 10%;
+    }
+}
+@keyframes sasukemove {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -15vw;
+    }
+}
+ @keyframes chidori {
+    0% {
+        right: -4vw;
+        opacity: 1;
+    }
+    50% {
+        right: -150vw;
+        opacity: 1;
+    }
+    100% {
+        right: -4vw;
+    }
+ }
+ @keyframes rasengan {
+    0% {
+        left: 8vw;
+        opacity: 1;
+    }
+    50% {
+        left: 120vw;
+        opacity: 1;
+    }
+    100% {
+        left: 6vw;
+    }
+ }
